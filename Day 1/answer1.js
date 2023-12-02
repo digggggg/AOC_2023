@@ -103,7 +103,7 @@ function part2(data) {
         }
         // console.log(rightString);
         let sum = leftString + rightString;
-        // console.log(sum);
+        console.log("These are the sums", sum);
         answer += parseInt(sum);
     }
     console.log(answer);
