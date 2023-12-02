@@ -14,17 +14,19 @@ function part1(data) {
     var answer = 0;
     for (var i = 0; i < data.length; i++) {
         let index = data[i];
-        var sum = 0;
+        var numsArr = [];
+
         for (var j = 0; j < index.length; j++) {
             if (numbersList.has(index[j])) {
-                sum += parseInt(index[j]);
-            } else {
-                console.log("The character is not numeric");
+                numsArr.push(index[j]);
             }
-
-            console.log(sum);
         }
-        answer += sum;
+        var start = numsArr[0];
+        var end = numsArr[numsArr.length - 1];
+
+        var sum = start + end;
+        console.log(sum);
+        answer += parseInt(sum);
     }
     console.log("This is the answer", answer);
 }
